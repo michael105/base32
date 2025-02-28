@@ -59,7 +59,7 @@ Gigabytes in base32. Would be a huge waste of memory.
 
 ---
 
-There's one advantage with the branchless solution:
+There's one advantage with a branchless solution:
 it is cryptographically more save. (Spectre, sidechannel, ..)
 Runtime, power consumption and used registers are independent of the input data.
 Feeding 0's only might have the same runtime, as working with random.
