@@ -27,7 +27,7 @@ So - I have to conclude, at least in this case,
 albite there's a direct dependency chain on the branch,
 there's no real advantage by programming branchless.
 
-I leave the different codes in the file 'base32bench'.
+I leave the different codes in the file 'base32.c'.
 
 
 My implementation is about 10% faster than the gnu utils one.
@@ -45,6 +45,8 @@ this might be related to the missing alignment.
 It should be possible to write something more performant,
 but in favor of codesize I leave this, as it is.
 
+It is just an experiment.
+
 .. 
 
 
@@ -58,7 +60,7 @@ Gigabytes in base32. Would be a huge waste of memory.
 ---
 
 There's one advantage with the branchless solution:
-it might be cryptographically more save.
+it might be cryptographically more save. (Spectre, sidecannel, ..)
 Runtime and used registers should be independent of the input data.
 Feeding only 0's might have the same runtime, as working with random.
 
