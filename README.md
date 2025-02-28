@@ -60,11 +60,11 @@ Gigabytes in base32. Would be a huge waste of memory.
 ---
 
 There's one advantage with the branchless solution:
-it might be cryptographically more save. (Spectre, sidechannel, ..)
-Runtime and used registers should be independent of the input data.
-Feeding only 0's might have the same runtime, as working with random.
+it is cryptographically more save. (Spectre, sidechannel, ..)
+Runtime, power consumption and used registers are independent of the input data.
+Feeding 0's only might have the same runtime, as working with random.
 
-Branch prediction isn't needed at all.
+Branch prediction isn't used at all.
 
 
 
